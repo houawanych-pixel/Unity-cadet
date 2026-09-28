@@ -60,3 +60,7 @@ The player can talk with Judy, trigger a simulated event, receive a story-consis
 ## Setup and testing
 
 No install or run commands are available yet. Add exact setup instructions, required environment variables, and verified test commands with the first implementation. Keep API keys out of the public repository and client-side code.
+
+## Temporary geometry
+
+Use basic primitive shapes for early ship, cockpit, and environment placeholders until the creator supplies final geometry. Do not delay the prototype for finished models. Keep visual models separate from movement, collision, weapon mounts, camera anchors, and link/docking points so replacement geometry does not require rewriting those systems. Clearly label placeholder visuals. This applies when a basic flight demonstration is added; the first priority remains Judy's chat and story system.
