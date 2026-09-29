@@ -34,11 +34,16 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: Unity-Cadet-Mobile-v0.2.0
+          overwrite: true
           path: web
           retention-days: 30
-      - uses: actions/upload-pages-artifact@v3
+      - name: Package Pages artifact
+        run: tar --dereference --hard-dereference -cvf /tmp/artifact.tar -C web .
+      - uses: actions/upload-artifact@v4
         with:
-          path: web
+          name: github-pages
+          path: /tmp/artifact.tar
+          overwrite: true
       - uses: actions/configure-pages@v5
   deploy:
     needs: build
