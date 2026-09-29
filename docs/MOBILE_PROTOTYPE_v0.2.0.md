@@ -37,3 +37,6 @@ Import/split the actual ship GLBs; improve cockpit icons and visual effects; tes
 
 ## Verification in this session
 Godot 4.3 import and web export succeeded. Deterministic simulation checks passed for targeting, gun cooldown/damage, finite missile/mine stocks, finite repair charges/cooldown, link rejection during threats, flight movement, engine cut, stationary warp start, movement cancellation, completion, target tracking, and call/end-call log. Headless engine emits dummy-renderer mesh cleanup messages on exit. Local Chromium 134 software-rendering startup crashed (SIGSEGV); mobile browser interaction and physical-device performance remain unverified.
+
+## Publishing status
+Source published to the existing repository. GitHub runner import, simulation checks and export passed. Initial deployment could not create the Pages site: `Resource not accessible by integration`. Owner must set repository Settings → Pages → Source to GitHub Actions, then rerun the Mobile cockpit playtest workflow. Export artifacts are retained before the Pages check. No public play URL has been verified yet.

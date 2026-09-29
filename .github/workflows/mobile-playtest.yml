@@ -12,6 +12,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   build:
+    timeout-minutes: 10
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -30,12 +31,15 @@ jobs:
           printf 'Unity Cadet v0.2.0\nCommit: %s\nGodot 4.3\n' "$GITHUB_SHA" > web/version.txt
           cd web
           sha256sum game.wasm game.pck >> version.txt
-      - uses: actions/configure-pages@v5
+      - uses: actions/upload-artifact@v4
         with:
-          enablement: true
+          name: Unity-Cadet-Mobile-v0.2.0
+          path: web
+          retention-days: 30
       - uses: actions/upload-pages-artifact@v3
         with:
           path: web
+      - uses: actions/configure-pages@v5
   deploy:
     needs: build
     runs-on: ubuntu-latest
