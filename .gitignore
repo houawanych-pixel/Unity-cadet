@@ -5,3 +5,5 @@ web/game.*
 web/*.png
 web/*.audio.*
 web/*.worker.js
+web/index.*
+!web/.gitkeep

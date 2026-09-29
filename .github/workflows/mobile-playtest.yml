@@ -28,9 +28,9 @@ jobs:
           /tmp/godot/Godot_v4.3-stable_linux.x86_64 --headless --path client --editor --import --quit
           /tmp/godot/Godot_v4.3-stable_linux.x86_64 --headless --path client -- --self-test
           /tmp/godot/Godot_v4.3-stable_linux.x86_64 --headless --path client --export-release Web
-          printf 'Unity Cadet v0.2.0\nCommit: %s\nGodot 4.3\n' "$GITHUB_SHA" > web/version.txt
+          printf 'Unity Cadet v0.2.1 (loader)\nCommit: %s\nGodot 4.3\n' "$GITHUB_SHA" > web/version.txt
           cd web
-          sha256sum game.wasm game.pck >> version.txt
+          sha256sum index.wasm index.pck >> version.txt
       - uses: actions/upload-artifact@v4
         with:
           name: Unity-Cadet-Mobile-v0.2.0
