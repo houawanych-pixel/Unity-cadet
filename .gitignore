@@ -1,0 +1,7 @@
+client/.godot/
+web/*.wasm
+web/*.pck
+web/game.*
+web/*.png
+web/*.audio.*
+web/*.worker.js

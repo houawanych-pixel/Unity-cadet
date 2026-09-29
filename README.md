@@ -12,7 +12,7 @@ The player talks naturally with Judy through a small comms portrait. She should 
 
 Read [Story and Product Requirements Document](docs/STORY_AND_PRD.md) before implementing features. It records approved story facts, open decisions, scope, and acceptance criteria. Do not turn proposed ideas or unexplained artifact details into established canon.
 
-**Current status:** planning documentation only. No runnable prototype or verified AI integration is included yet.
+**Current status:** v0.2.0 adds a runnable Godot 4.3 mobile anime cockpit training demo. See [prototype scope, setup and asset status](docs/MOBILE_PROTOTYPE_v0.2.0.md). Live AI, voice and video are not connected. The latest creator request prioritizes this simple interactive screen before detailed video production.
 
 ## Build first: Judy's chat and story prototype
 
@@ -59,7 +59,7 @@ The player can talk with Judy, trigger a simulated event, receive a story-consis
 
 ## Setup and testing
 
-No install or run commands are available yet. Add exact setup instructions, required environment variables, and verified test commands with the first implementation. Keep API keys out of the public repository and client-side code.
+Open `client/project.godot` in Godot 4.3 and run. Export preset Web produces the mobile browser build; see the prototype document for exact commands. Keep API keys out of the public repository and client-side code.
 
 ## Temporary geometry
 
